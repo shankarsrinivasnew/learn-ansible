@@ -1,6 +1,10 @@
-- name: play1
+- name: Play1
   hosts: all
   tasks:
     - name: Messaging
       ansible.builtin.debug:
         msg: "hello world shankar"
+    - name: Messaging2
+      ansible.builtin.debug:
+        msg: "hello world sss"
+        
