@@ -7,7 +7,7 @@
     register: outss
   - name : output
     ansible.builtin.debug:
-      msg: "{{outss}}"
+      msg: "{{outss.rc}}"
 - name : play2
   hosts: all
   tasks:
