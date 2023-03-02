@@ -2,5 +2,10 @@
   hosts: all
   tasks:
   - name : register
-    ansible.builtin.shell: uptime
+    ansible.builtin.shell: 
+      uptime
     register: out
+  - name : output
+    ansible.builtin.debug:
+      msg: "{{out}}"
+      
