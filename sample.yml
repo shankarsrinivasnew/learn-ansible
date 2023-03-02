@@ -1,6 +1,6 @@
 - name: play1
   hosts: all
   tasks:
-    - Name: messaging
+    - name: Messaging
       ansible.builtin.debug:
         msg: "hello world shankar"
