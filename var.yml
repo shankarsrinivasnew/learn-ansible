@@ -7,5 +7,13 @@
     register: out
   - name : output
     ansible.builtin.debug:
-      msg: "{{out.rc}}"
-      
+      msg: "{{out}}"
+- name : play2
+  hosts: all
+  tasks:
+  - name : declare
+    ansible.builtin.set_fact:
+      status: "{{out.rc}}"
+  - name : print status
+    ansible.builtin.debug:
+      msg: "{{status}}"     
