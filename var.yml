@@ -13,7 +13,7 @@
   tasks:
   - name : declare
     ansible.builtin.set_fact:
-      status: "{{outss.rc}}"
+      status: hero
   - name : print status
     ansible.builtin.debug:
       msg: "{{status}}"     
