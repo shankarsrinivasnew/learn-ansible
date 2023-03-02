@@ -4,16 +4,16 @@
   - name : register
     ansible.builtin.shell: 
       uptime
-    register: out
+    register: outss
   - name : output
     ansible.builtin.debug:
-      msg: "{{out}}"
+      msg: "{{outss}}"
 - name : play2
   hosts: all
   tasks:
   - name : declare
     ansible.builtin.set_fact:
-      status: "{{out.rc}}"
+      status: "{{outss.rc}}"
   - name : print status
     ansible.builtin.debug:
       msg: "{{status}}"     
