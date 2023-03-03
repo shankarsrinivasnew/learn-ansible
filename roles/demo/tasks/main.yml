@@ -1,6 +1,4 @@
-- name: role play
-  hosts: all
-  tasks:
-  - name: role message
-    ansible.builtin.debug:
-      msg : hello from roles and url is {{URL}}
+- name : task name
+  ansible.builtin.debug :
+    msg : url is {{URL}}
+    
