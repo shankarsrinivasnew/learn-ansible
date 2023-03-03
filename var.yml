@@ -32,3 +32,11 @@
     - name: var from inventory
       ansible.builtin.debug:
         msg: url of play is {{URL}}
+
+- name: play5
+  hosts: all
+  tasks:
+    - name: var from cmd
+      ansible.builtin.debug:
+        msg: url of play is {{URL}}
+
