@@ -6,3 +6,12 @@
     - name: play var
       ansible.builtin.debug:
         msg: url of play is {{URL}}
+
+- name: play2
+  hosts: all
+  vars_files:
+    - variable.yml
+  tasks:
+  - name: var from vars_files
+    ansible.builtin.debug:
+      msg : url of play is {{URL}}
