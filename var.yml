@@ -1,19 +1,7 @@
 - name : play1
-  hosts: all
+  hosts : all
+  URL : play.example.com
   tasks:
-  - name : register
-    ansible.builtin.shell: 
-      uptime
-    register: outss
-  - name : output
+  - name : play var
     ansible.builtin.debug:
-      msg: "{{outss.rc}}"
-- name : play2
-  hosts: all
-  tasks:
-  - name : declare
-    ansible.builtin.set_fact:
-      status: hero
-  - name : print status
-    ansible.builtin.debug:
-      msg: "{{status}}"     
+      msg : url of play is {{URL}}
