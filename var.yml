@@ -1,7 +1,8 @@
-- name : play1
-  hosts : all
-  URL : play.example.com
+- name: play1
+  hosts: all
+  vars:
+    URL: play.example.com
   tasks:
-  - name : play var
-    ansible.builtin.debug:
-      msg : url of play is {{URL}}
+    - name: play var
+      ansible.builtin.debug:
+        msg: url of play is {{URL}}
