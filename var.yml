@@ -16,11 +16,19 @@
       ansible.builtin.debug:
         msg: url of play is {{URL}}
 
-- name: play2
+- name: play3
   hosts: all
   tasks:
-    - name: var from vars_files
+    - name: var from task
       vars:
         URL: task.example.com
+      ansible.builtin.debug:
+        msg: url of play is {{URL}}
+
+
+- name: play4
+  hosts: all
+  tasks:
+    - name: var from inventory
       ansible.builtin.debug:
         msg: url of play is {{URL}}
