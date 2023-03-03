@@ -3,4 +3,4 @@
   tasks:
     - name: role message
       ansible.builtin.debug:
-        msg : "hello from roles and url is {{URL}}"
+        msg : hello from roles and url is {{URL}}
