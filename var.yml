@@ -12,6 +12,15 @@
   vars_files:
     - variable.yml
   tasks:
-  - name: var from vars_files
-    ansible.builtin.debug:
-      msg : url of play is {{URL}}
+    - name: var from vars_files
+      ansible.builtin.debug:
+        msg: url of play is {{URL}}
+
+- name: play2
+  hosts: all
+  tasks:
+    - name: var from vars_files
+      vars:
+        URL: task.example.com
+      ansible.builtin.debug:
+        msg: url of play is {{URL}}
