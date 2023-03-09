@@ -5,4 +5,4 @@
   tasks:
     - name : splitter
       ansible.builtin.debug:
-        msg: "{{ url | split('/') |last | regex (.tar.gz /" ") }}"
+        msg: "{{ url | split('/') |last | regex ('.tar.gz'," ") }}"
