@@ -1,0 +1,9 @@
+- name : loops
+  hosts: localhost
+  ansible_builtin_debug:
+    msg : fruit name is {{item}}
+  loop:
+    - apple
+    - mango
+    - bannana
+    
