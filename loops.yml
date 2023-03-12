@@ -5,6 +5,6 @@
       ansible.builtin.debug:
         msg : fruit name is {{item.name}} and price is {{item.price}}
       loop:
-        - { "name:apple", "price:1"}
-        - { "name:mango", "price:2"}
-        - { "name:bannana", "price:3"}
+        - { name: "apple", price: 1}
+        - { name: "mango", price: 2}
+        - { name: "bannana", price: 3}
