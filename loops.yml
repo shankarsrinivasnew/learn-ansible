@@ -3,8 +3,8 @@
   tasks:
     - name : looping
       ansible.builtin.debug:
-        msg : fruit name is {{item}}
+        msg : fruit name is {{item.name}} and price is {{item.price}}
       loop:
-        - apple
-        - mango
-        - bannana
+        - { "name=apple", "price=1"}
+        - { "name=mango", "price=2"}
+        - { "name=bannana", "price=3"}
